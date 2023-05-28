@@ -1,0 +1,32 @@
+// app global css in Sass form
+.slider-base
+  width: 100%
+  position: relative
+  overflow: hidden
+
+  .container-slider
+    display: flex
+    flex-direction: row
+    align-content: center
+    transition: 180ms
+
+  .slide-item
+    position: relative
+    min-width: 100%
+    width: 100%
+    opacity: 0.4
+    transition: 180ms
+
+    &.next
+      transform: scale(0.95) translateX(-25%)
+      cursor: pointer
+      z-index: 10
+
+    &.previous
+      transform: scale(0.95) translateX(25%)
+      z-index: 10
+      cursor: pointer
+
+    &.active
+      opacity: 1
+      transform: scale(1)
